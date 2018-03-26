@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contactCard{
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    vertical-align: top;
+    width: 350px;
+    height: 150px;
+    border: 1px solid black;
+
+}
+
+#container{
+    background-color: aqua;
+    width: 970px;
+    margin: 0 auto;
+
+}
+
+
+label{
+    margin-bottom: 15px;
+}
+
+input{
+    margin: 10px;
+}
+
+form{
+    margin: 20px;
+    display: inline-block;
+}
+
+textarea{
+    width: 250px;
+}
+
+button{
+    margin-top: 15px;
+}
+
+#right{
+    display: inline-block;
+    height: auto;
+    width: 400px;
+    vertical-align: top;
+}
+
+.hiddenDescription{
+    text-align: left;
+    padding: 15px;
+}

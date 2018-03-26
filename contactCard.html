@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="contactCard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('#right').append(`
+                        <div class="contactCard">
+                            <h1 class="hidden">${$('.firstName').val()}  ${$('.lastName').val()}</h1>
+                            <p class="hidden">Click for description</p>
+                            <p class="hiddenDescription">${$(".description").val()}</p>
+                        </div>
+                `)
+                    $(".hiddenDescription").hide();
+                return false;
+            })
+
+
+            $(document).on("click", ".contactCard", function(){
+                $(this).children(".hiddenDescription").toggle();
+                $(this).children(".hidden").toggle();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+                <form>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" class="firstName">
+                        <p></p>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" class="lastName">
+                        <p>
+                            <label for="description">Description:</label>
+                        </p>
+                        <textarea name="description" class="description" cols="30" rows="10"></textarea>
+                        <p></p>
+                        <button>Add User</button>
+                    </form>
+                    <div id = "right"></div>
+    </div>
+</body>
+</html>
